@@ -4,7 +4,9 @@ public class SocketClient {
 
     private static SocketClient socketClient = null;
 
-    private SocketClient() {}
+    private SocketClient() {
+
+    }
 
     public static SocketClient getInstance() {
         if(socketClient == null) {
