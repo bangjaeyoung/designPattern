@@ -1,40 +1,36 @@
 package com.company.design;
 
 import com.company.design.adapter.*;
+import com.company.design.aop.AopBrowser;
+import com.company.design.decorator.*;
+import com.company.design.proxy.BrowserProxy;
+import com.company.design.proxy.IBrowser;
 import com.company.design.singleton.AClazz;
 import com.company.design.singleton.BClazz;
 import com.company.design.singleton.SocketClient;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Main {
-
     public static void main(String[] args) {
+        ICar audi = new Audi(1000);
+        audi.showPrice();
 
-        AClazz aClazz = new AClazz();
-        BClazz bClazz = new BClazz();
+        // a3
+        ICar audi3 = new A3(audi, "A3");
+        audi3.showPrice();
 
-        SocketClient aClient = aClazz.getSocketClient();
-        SocketClient bClient = bClazz.getSocketClient();
+        // a4
+        ICar auid4 = new A4(audi, "A4");
+        auid4.showPrice();
 
-        System.out.println("두 객체는 동일한가?");
-        System.out.println(aClient.equals(bClient));
+        // a5
+        ICar audi5 = new A5(audi, "A5");
+        audi5.showPrice();
+    }
+
+    //콘센트
+    public static void connect(Electronic110V electronic110V) {
+        electronic110V.powerOn();
     }
 }
-
-//        HairDryer hairDryer = new HairDryer();
-//        connect(hairDryer);
-//
-//        Cleaner cleaner = new Cleaner();
-//        //connect(cleaner);
-//        //오류
-//
-//        Electronic110V adapter = new SocketAdapter(cleaner);
-//        connect(adapter);
-//
-//        AirConditioner airConditioner = new AirConditioner();
-//
-//        Electronic110V airAdapter = new SocketAdapter(airConditioner);
-//        connect(airAdapter);
-//    }
-//    public static void connect(Electronic110V electronic110V) {
-//        electronic110V.powerOn();
-//    }
