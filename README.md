@@ -1,7 +1,11 @@
 Studying Design-Pattern
 
-singleton
+adapter
+
+aop
+
+decorator
 
 proxy
 
-decorator
+singleton
