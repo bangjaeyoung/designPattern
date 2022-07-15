@@ -1,11 +1,11 @@
-#1 Studying Design-Pattern
+# Studying Design-Pattern
 
-adapter
+> adapter
 
-aop
+> aop
 
-decorator
+> decorator
 
-proxy
+> proxy
 
-singleton
+> singleton
