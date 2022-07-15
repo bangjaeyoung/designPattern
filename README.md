@@ -1,5 +1,5 @@
 Studying Design-Pattern
 
-singleton
+\nsingleton
 proxy
 decorator
