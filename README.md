@@ -1,4 +1,4 @@
-#1Studying Design-Pattern
+#1 Studying Design-Pattern
 
 adapter
 
